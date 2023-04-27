@@ -23,7 +23,8 @@ public enum Planet {
         this.distanceFromSun = previousPlanet != null ? previousPlanet.distanceFromSun + distanceFromPrevious : 0;
         this.radius = radius;
         this.previousPlanet = previousPlanet;
-        previousPlanet.nextPlanet = this;
+        if(previousPlanet != null)
+            previousPlanet.nextPlanet = this;
 
     }
 
